@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #f3f3f3;
+	color: #000;
+	font-family: sans-serif;
+}
+.contenedor{
+	width: 95%;
+	max-width: 1024px;
+	margin: 20px auto;
+
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns:  repeat(6, 1fr);
+	grid-template-rows:  repeat(8, auto);
+
+	grid-template-areas: "header header header header header header"
+					      "menu1 menu2 menu3 menu4 menu5 menu6"
+					      "contenido1 contenido1 contenido1 contenido1 contenido1 contenido1"
+					      "sidebar1 sidebar1 sidebar1 sidebar2 sidebar2 sidebar2"
+					      "section1 section1 section1 section1 section1 section1"
+						  "section2 section2 section2 section2 section2 section2"
+						  "footer footer footer footer footer footer";
+}
+.contenedor > section, 
+.contenedor .cabecera,
+.contenedor .menu1, 
+.contenedor .menu2, 
+.contenedor .menu3, 
+.contenedor .menu4, 
+.contenedor .menu5, 
+.contenedor .menu6, 
+.contenedor .contenido1, 
+.contenedor .sidebar1,
+.contenedor .sidebar2,
+.contenedor .section1,
+.contenedor .section2,
+.contenedor .footer{
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.contenedor .cabecera {
+	background: #83A17F;
+	color: #fff;
+	grid-area: header;
+}
+.contenedor .menu1 {
+	background: #3E483C;
+	color: #fff;
+	grid-area: menu1;
+}
+.contenedor .menu2 {
+	background: #3E483C;
+	color: #fff;
+	grid-area: menu2;
+}
+.contenedor .menu3 {
+	background: #3E483C;
+	color: #fff;
+	grid-area: menu3;
+}
+.contenedor .menu4 {
+	background: #3E483C;
+	color: #fff;
+	grid-area: menu4;
+}
+.contenedor .menu5 {
+	background: #3E483C;
+	color: #fff;
+	grid-area: menu5;
+}
+.contenedor .menu6 {
+	background: #3E483C;
+	color: #fff;
+	grid-area: menu6;
+}
+
+.contenedor .contenido1{
+	grid-area: contenido1;
+	text-align: center;
+	background: #333;
+	color: #fff;
+}
+
+.contenedor .sidebar1, 
+.contenedor .sidebar2{
+	background: #333;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contenedor .sidebar1{
+	grid-area: sidebar1;
+}
+.contenedor .sidebar2{
+	grid-area: sidebar2;
+}
+
+
+
+.contenedor .section1{
+	background: #333;
+	color: #fff;
+	grid-area: section1;
+}
+
+.contenedor .section2{
+	
+	background: #333;
+	color: #fff;
+	grid-area: section2;
+}
+
+.contenedor .footer{
+	background: #000;
+	color: #fff;
+	grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor{
+		grid-template-areas: "header header header"
+				      "nav nav nav"
+				      "contenido contenido  contenido"
+				      "sidebar sidebar  sidebar"
+				      "noticia1 noticia2 noticia2"
+				      "footer footer footer";
+	}
+}
+
+@media screen and (max-width: 568px){
+	.contenedor{
+		grid-template-areas: "header header header"
+				      "nav nav nav"
+				      "contenido contenido  contenido"
+				      "sidebar sidebar  sidebar"
+				      "noticia1 noticia1 noticia1"
+				      "noticia2 noticia2 noticia2"
+				      "footer footer footer";
+	}
+}
